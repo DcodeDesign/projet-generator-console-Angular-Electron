@@ -1,0 +1,53 @@
+<div class="text-center">
+    <div class="container mt-5">
+        <form class="d-flex flex-column justify-content-between align-items-center">
+
+            <div class="w-75 d-flex flex-row justify-content-around align-items-center mb-5">
+                <div class="d-flex flex-row justify-content-end align-items-center">
+                    <label class="mx-1"><span class="font-weight-bold">Version</span></label>
+                    <input class="col-2" id="version" type="number" maxlength="3" disabled="true">
+                </div>
+                <div class="form-check form-switch ">
+                    <input class="form-check-input" id="uppercase" type="checkbox" >
+                    <label class="form-check-label"><span class="font-weight-bold">Aa</span></label>
+                </div>
+
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <button class="btn btn-primary" id="generate"><i class="fas fa-sync-alt"></i></button>
+                </div>
+            </div>
+
+
+            <div class="w-100 d-flex flex-column justify-content-around align-items-center">
+                <div class="d-flex w-100 mt-2">
+                    <label for="hex" class="col-2">Hex</label>
+                    <div class="col-9">
+                        <input id="hex" #inputHex name="text" type="text" class="form-control">
+                    </div>
+                    <div class="col-1">
+                        <button [ngxClipboard]="inputHex" class="copy btn btn-primary"><i class="far fa-copy"></i></button>
+                    </div>
+                </div>
+                <div class="d-flex w-100 mt-2">
+                    <label for="dbhex" class="col-2 col-form-label">DB Hex</label>
+                    <div class="col-9">
+                        <input id="dbhex" #inputdbhex name="dbhex" type="text" class="form-control">
+                    </div>
+                    <div class="col-1">
+                        <button [ngxClipboard]="inputdbhex" class="copy btn btn-primary"><i class="far fa-copy"></i></button>
+                    </div>
+                </div>
+                <div class="d-flex w-100 mt-2">
+                    <label for="uuid" class="col-2 col-form-label">uuid</label>
+                    <div class="col-9">
+                        <input id="uuid" name="uuid" #inputuuid type="text" class="form-control">
+                    </div>
+                    <div class="col-1">
+                        <button [ngxClipboard]="inputuuid" class="copy btn btn-primary"><i class="far fa-copy"></i></button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.container-navigations {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+
+  nav {
+    display: block;
+    z-index: 998;
+    top: 40px;
+    height: auto;
+    position: relative;
+    box-sizing: content-box;
+    bottom: 0;
+    overflow: auto;
+    background: transparent;
+  }
+
+  ul {
+    margin: 15px 0 -6px 35px;
+    padding: 0;
+    list-style: none;
+    color: white;
+  }
+
+  ul li {
+    display: inline-block;
+  }
+
+  ul li a {
+    font-family: Segoe UI, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    vertical-align: middle;
+    display: table-cell;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  ul li a:hover {
+    background-color: #185072;
+  }
+
+  ul li a.is-active {
+    color:#244E7A;
+    background-color:white;
+  }
+}

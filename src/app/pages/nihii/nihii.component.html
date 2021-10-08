@@ -1,0 +1,38 @@
+<div class="text-center">
+    <div class="container mt-5">
+        <form>
+            <div class="form-group mb-3 row">
+                <label for="nihii11" class="col-3 col-form-label">NIHII 11</label>
+                <div class="col-5">
+                    <input id="nihii11" name="text" type="text" class="form-control" maxlength="11">
+                </div>
+                <div class="col-2 btn-group">
+                    <button class="btn btn-primary" id="generate"><i class="fas fa-sync-alt"></i></button>
+                    <button class="btn btn-secondary" id="clear"><i class="fas fa-backspace"></i></button>
+                </div>
+            </div>
+            <div class="form-group  mb-3 row">
+                <label for="nihiiShort" class="col-3 col-form-label">NIHII 9</label>
+                <div class="col-5">
+                    <div class="input-group">
+                        <input id="nihiiShort" name="text" type="text" class="form-control" maxlength="9" disabled="true">
+                        <span id="qualification" class="input-group-text"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3 row">
+                <label for="checksum" class="col-3 col-form-label">Checksum</label>
+                <div class="col-5">
+                    <input id="checksum" name="checksum" type="number" class="form-control" maxlength="3">
+                </div>
+            </div>
+            <div class="form-group mb-3 row">
+                <label for="checksums" class="col-3 col-form-label">Valid checksums</label>
+                <div class="col-5">
+                    <input id="checksums" name="checksums" type="text" class="form-control" disabled="true">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
