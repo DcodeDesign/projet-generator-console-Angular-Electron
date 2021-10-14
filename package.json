@@ -15,7 +15,6 @@
     "package-mac": "electron-packager . angular-electron-mac --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=builds-mac",
     "package-win": "electron-packager . angular-electron-win --overwrite --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico --prune=true --out=builds-win --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron\"",
     "package-linux": "electron-packager . angular-electron-lin --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/lin/icon.icns --prune=true --out=builds-linux",
-    "pack": "electron-builder --dir",
     "dist": "electron-builder"
   },
   "private": true,
@@ -42,29 +41,40 @@
     "tslint": "~5.18.0",
     "typescript": "~3.7.5"
   },
-
   "build": {
     "appId": "your.id",
-
-    "files": ["**/*", "dist/**/*"],
-
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "files": [
+      "**/*",
+      "dist/**/*"
+    ],
     "directories": {
       "output": "./release",
       "buildResources": "./dist/angular-electron"
     },
-
     "win": {
       "target": [
         "nsis"
       ]
     },
-
     "nsis": {
-      "oneClick" : false ,
+      "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "perMachine" : true
+      "perMachine": true
     },
-
     "publish": [
       {
         "provider": "github",
@@ -74,5 +84,4 @@
       }
     ]
   }
-
 }
